@@ -1,87 +1,92 @@
 # 🌐 LEDS Website
 
-Este repositório contém o código-fonte do site oficial do LEDS (Laboratório de Extensão em Desenvolvimento de Soluções), desenvolvido utilizando as tecnologias modernas da web.
+Este repositório contém o código-fonte do site oficial do **LEDS (Laboratório de Extensão em Desenvolvimento de Soluções)**.
 
-## 📁 Estrutura do Projeto
+---
 
-O projeto está estruturado de forma modular para facilitar manutenção e escalabilidade. As principais pastas são:
+## 📖 Sobre o Projeto
 
-- `app/`: Rotas e páginas do site.
-- `components/`: Componentes reutilizáveis da interface.
-- `data/`: Conteúdo em formato JSON que alimenta as seções do site.
-- `hooks/`: Custom hooks para lógica compartilhada em React.
-- `lib/`: Funções utilitárias.
-- `public/`: Arquivos estáticos como imagens e ícones.
-- `styles/`: Estilização global e variáveis de tema.
+Este projeto é o site institucional do LEDS, um laboratório de extensão focado no desenvolvimento de soluções de software.  
+O objetivo principal do site é apresentar o laboratório, seus projetos, membros e publicações, servindo como um ponto central de contato e divulgação das atividades.
 
-## 🚀 Tecnologias Utilizadas
+---
 
-- **Next.js** 14+ – Framework React para aplicações web modernas.
-- **React** 18+ – Biblioteca para interfaces reativas.
-- **TypeScript** – Tipagem estática para maior confiabilidade.
-- **Tailwind CSS** – Estilização com classes utilitárias.
-- **shadcn/ui** – Componentes de UI prontos para uso.
-- **Lucide Icons** – Ícones modernos e personalizáveis.
+## ✨ Tecnologias Utilizadas
 
-## 📦 Gerenciamento de Pacotes
+- **Next.js 14+** – Framework React para aplicações web modernas  
+- **React 18+** – Biblioteca para interfaces reativas  
+- **TypeScript** – Tipagem estática para maior confiabilidade  
+- **Tailwind CSS** – Estilização com classes utilitárias  
+- **shadcn/ui** – Componentes de UI prontos para uso  
+- **Lucide Icons** – Ícones modernos e personalizáveis  
 
-O projeto utiliza `pnpm` como gerenciador de pacotes. Para instalar as dependências:
+---
+
+## ⚙️ Pré-requisitos
+
+Antes de começar, certifique-se de que você tem os seguintes requisitos instalados:
+
+- [Node.js](https://nodejs.org/) (versão **18.17** ou superior)  
+- [pnpm](https://pnpm.io/) (gerenciador de pacotes)
+
+---
+
+## 🚀 Instalação
+
+Siga estas etapas para configurar o projeto localmente:
+
+1. Clone o repositório:
+
+```bash
+git clone https://github.com/seu-usuario/seu-repositorio.git
+cd seu-repositorio
+```
+
+2. Instale as dependências:
 
 ```bash
 pnpm install
 ```
 
-Para rodar o projeto localmente:
+3. Configure as variáveis de ambiente (se necessário):  
+Crie um arquivo `.env.local` na raiz do projeto e adicione as variáveis conforme o exemplo em `.env.example`.
+
+4. Execute o projeto em modo de desenvolvimento:
 
 ```bash
 pnpm dev
 ```
 
+5. Acesse em seu navegador:  
+[http://localhost:3000](http://localhost:3000)
+
+---
+
+## 📁 Estrutura de Diretórios
+
+```
+leds-website/
+├── app/         # Rotas e páginas do site
+├── components/  # Componentes reutilizáveis da interface
+├── data/        # Conteúdo em formato JSON
+├── hooks/       # Custom hooks para lógica compartilhada
+├── lib/         # Funções utilitárias
+├── public/      # Arquivos estáticos (imagens, ícones)
+├── styles/      # Estilização global e variáveis de tema
+├── .gitignore
+├── next.config.mjs
+├── package.json
+├── pnpm-lock.yaml
+└── README.md
+```
+
+---
+
 ## 🧪 Contribuindo
 
-Sinta-se à vontade para abrir uma issue, sugerir melhorias ou contribuir com código via pull request.
+Sinta-se à vontade para abrir uma **issue**, sugerir melhorias ou contribuir com código via **pull request**.  
+Toda contribuição é bem-vinda!
 
+---
 
-Para manter o padrão desse aqui
-
-
-# Título do Projeto
-Uma breve descrição do projeto e seu propósito.
-
-## Sobre o projeto
-Explique aqui o que é o projeto, qual problema ele resolve e qual é o seu objetivo principal. Adicione também informações sobre o contexto em que ele foi criado.
-## Pré-requisitos
-Antes de começar, certifique-se de que você tem os seguintes requisitos instalados:
-
-- [Node.js](https://nodejs.org/) (se aplicável)
-- [Python 3.x](https://www.python.org/) (se aplicável)
-- [Docker](https://www.docker.com/) (se aplicável)
-- Outras dependências...
-## Instalação
-Siga estas etapas para configurar o projeto localmente:
-
-1. Instale my-project com npm
-
-```bash
-  npm install my-project
-  cd my-project
-```
-
-2. Configure as variáveis de ambiente
-Crie um arquivo `.env` na raiz do projeto e adicione as variáveis necessárias.
-
-3. Execute o projeto com o comando:
-## Estrutura de diretórios
-Explique a estrutura do projeto, se necessário:
-
-```
-nome-do-repositorio/
-├── src/
-│   ├── main.js
-│   └── ...
-├── .env
-├── .gitignore
-├── LICENSE
-├── README.md
-└── package.json
-```
+**LEDS – Laboratório de Extensão em Desenvolvimento de Soluções**
