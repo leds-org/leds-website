@@ -17,22 +17,25 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20 # <--- ALtere para a versão do Node.js que você usa localmente (ex: 18, 20, 22)
-          cache: 'pnpm' # <--- AGORA CORRETO PARA PNPM
+          cache: 'pnpm'
+
+      - name: Install pnpm Globaly 🌍 # <--- NOVA ETAPA: Instala o pnpm globalmente
+        run: npm install -g pnpm
 
       - name: Install Dependencies with pnpm 📦
-        run: pnpm install --frozen-lockfile # <--- AGORA CORRETO PARA PNPM. --frozen-lockfile garante instalação consistente.
+        run: pnpm install --frozen-lockfile
 
       - name: Build Next.js App 🏗️
-        run: pnpm run build # <--- Garante que o comando de build também usa pnpm
+        run: pnpm run build
 
       - name: Add .nojekyll file (for GitHub Pages compatibility)
-        run: touch out/.nojekyll # Essencial para que o GitHub Pages não processe seu site com Jekyll
+        run: touch out/.nojekyll
 
       - name: Deploy to GitHub Pages 🚀
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./out # A pasta 'out' é onde o Next.js gera o site estático
+          publish_dir: ./out
           # Se o seu site GitHub Pages for um projeto (ex: seu-usuario.github.io/seu-repo)
           # e você configurou basePath/assetPrefix no next.config.mjs,
           # DESCOMENTE A LINHA ABAIXO para publicar na branch gh-pages:
