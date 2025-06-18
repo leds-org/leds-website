@@ -7,7 +7,7 @@ name: Deploy Next.js site to Pages
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: ["main"] # Altere para a branch principal do seu código (ex: master, main, etc.)
+    branches: ["main"] # <--- Verifique se esta é a sua branch principal. Altere se for 'master' ou outra.
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -60,24 +60,19 @@ jobs:
             exit 1
           fi
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: "20" # Altere para a versão do Node.js que você usa localmente (ex: 18, 22, etc.)
-          cache: ${{ steps.detect-package-manager.outputs.manager }}
-      
-      # Adicionar instalação global do pnpm, se for o caso
-      - name: Install pnpm Globaly (if pnpm is used)
+      - name: Install pnpm Globaly (if pnpm is used) 🌍 # <--- MOVEMOS ESTA ETAPA PARA CÁ!
         if: steps.detect-package-manager.outputs.manager == 'pnpm'
         run: npm install -g pnpm
 
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20" # <--- Verifique a versão do Node.js. Altere se você usa 18, 22, etc.
+          cache: ${{ steps.detect-package-manager.outputs.manager }}
+      
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
-          # Automatically inject basePath in your Next.js configuration file and disable
-          # server side image optimization (https://nextjs.org/docs/api-reference/next/image#unoptimized).
-          #
-          # You may remove this line if you want to manage the configuration yourself.
           static_site_generator: next
       
       - name: Restore cache
@@ -85,12 +80,7 @@ jobs:
         with:
           path: |
             .next/cache
-          # Generate a new cache whenever packages or source files change.
-          # Note: The 'key' should reflect the lock file of your detected package manager.
-          # For pnpm, it should include pnpm-lock.yaml. For yarn, yarn.lock. For npm, package-lock.json.
-          # The current key uses all, which is robust.
           key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock', '**/pnpm-lock.yaml') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
-          # If source files changed but packages didn't, rebuild from a prior cache.
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock', '**/pnpm-lock.yaml') }}-
       
@@ -98,8 +88,6 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       
       - name: Build with Next.js
-        # A action 'configure-pages' já cuida da injeção do basePath e unoptimized para GitHub Pages.
-        # Portanto, 'next build' é suficiente.
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       
       - name: Upload artifact
