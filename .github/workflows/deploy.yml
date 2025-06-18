@@ -1,9 +1,9 @@
-name: Deploy Site to GitHub Pages
+name: Deploy v0 Site to GitHub Pages
 
 on:
   push:
     branches:
-      - main # Mude para a branch principal do seu código (ex: master, main, etc.)
+      - main # <--- ALtere para a branch principal do seu código (ex: master, main, etc.)
 
 jobs:
   build-and-deploy:
@@ -13,17 +13,17 @@ jobs:
       - name: Checkout Repository 🛎️
         uses: actions/checkout@v4
 
-      - name: Setup Node.js Environment 🚀
+      - name: Setup Node.js Environment with pnpm 🚀
         uses: actions/setup-node@v4
         with:
-          node-version: 20 # Use a versão do Node.js que você usa localmente (ex: 18, 20, 22)
-          cache: 'npm' # Habilita cache para node_modules, acelerando builds futuros
+          node-version: 20 # <--- ALtere para a versão do Node.js que você usa localmente (ex: 18, 20, 22)
+          cache: 'pnpm' # <--- AGORA CORRETO PARA PNPM
 
-      - name: Install Dependencies 📦
-        run: npm ci # 'npm ci' é ideal para CI/CD para instalações limpas e rápidas
+      - name: Install Dependencies with pnpm 📦
+        run: pnpm install --frozen-lockfile # <--- AGORA CORRETO PARA PNPM. --frozen-lockfile garante instalação consistente.
 
       - name: Build Next.js App 🏗️
-        run: npm run build
+        run: pnpm run build # <--- Garante que o comando de build também usa pnpm
 
       - name: Add .nojekyll file (for GitHub Pages compatibility)
         run: touch out/.nojekyll # Essencial para que o GitHub Pages não processe seu site com Jekyll
@@ -33,6 +33,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./out # A pasta 'out' é onde o Next.js gera o site estático
-          # Se o seu site GitHub Pages for um projeto (ex: seu-usuario.github.io/seu-repo),
-          # você precisará do basePath e assetPrefix no next.config.mjs E descomentar a linha abaixo.
+          # Se o seu site GitHub Pages for um projeto (ex: seu-usuario.github.io/seu-repo)
+          # e você configurou basePath/assetPrefix no next.config.mjs,
+          # DESCOMENTE A LINHA ABAIXO para publicar na branch gh-pages:
           # publish_branch: gh-pages
