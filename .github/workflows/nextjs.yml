@@ -24,6 +24,10 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
+# Define uma variável de ambiente para o nome do cache
+env:
+  CACHE_NAME: cache-nextjs-pnpm # Nome único para o cache das dependências
+
 jobs:
   # Build job
   build:
@@ -31,7 +35,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      
+
       - name: Detect package manager
         id: detect-package-manager
         run: |
@@ -60,36 +64,36 @@ jobs:
             exit 1
           fi
 
-      - name: Install pnpm Globaly (if pnpm is used) 🌍 # <--- MOVEMOS ESTA ETAPA PARA CÁ!
-        if: steps.detect-package-manager.outputs.manager == 'pnpm'
-        run: npm install -g pnpm
-
-      - name: Setup Node
+      - name: Setup Node.js Environment # <--- AGORA SEM 'cache' AQUI!
         uses: actions/setup-node@v4
         with:
           node-version: "20" # <--- Verifique a versão do Node.js. Altere se você usa 18, 22, etc.
-          cache: ${{ steps.detect-package-manager.outputs.manager }}
-      
+
+      - name: Install pnpm Globaly (if pnpm is used) 🌍 # <--- Esta etapa garante que 'pnpm' esteja no PATH
+        if: steps.detect-package-manager.outputs.manager == 'pnpm'
+        run: npm install -g pnpm
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
           static_site_generator: next
-      
-      - name: Restore cache
+
+      - name: Restore dependencies cache # <--- Cache gerenciado separadamente
         uses: actions/cache@v4
         with:
           path: |
-            .next/cache
-          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock', '**/pnpm-lock.yaml') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
+            node_modules # Caching da pasta node_modules
+            .next/cache # Caching do cache de build do Next.js
+          key: ${{ runner.os }}-build-${{ env.CACHE_NAME }}-${{ hashFiles('**/package-lock.json', '**/yarn.lock', '**/pnpm-lock.yaml') }}
           restore-keys: |
-            ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock', '**/pnpm-lock.yaml') }}-
-      
+            ${{ runner.os }}-build-${{ env.CACHE_NAME }}-
+
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
-      
+
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
-      
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
