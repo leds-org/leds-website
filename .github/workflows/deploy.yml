@@ -1,0 +1,38 @@
+name: Deploy v0 Site to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # Mude para a branch principal do seu código (ex: master, main, etc.)
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository 🛎️
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js Environment 🚀
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20 # Use a versão do Node.js que você usa localmente (ex: 18, 20, 22)
+          cache: 'npm' # Habilita cache para node_modules, acelerando builds futuros
+
+      - name: Install Dependencies 📦
+        run: npm ci # 'npm ci' é ideal para CI/CD para instalações limpas e rápidas
+
+      - name: Build Next.js App 🏗️
+        run: npm run build
+
+      - name: Add .nojekyll file (for GitHub Pages compatibility)
+        run: touch out/.nojekyll # Essencial para que o GitHub Pages não processe seu site com Jekyll
+
+      - name: Deploy to GitHub Pages 🚀
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./out # A pasta 'out' é onde o Next.js gera o site estático
+          # Se o seu site GitHub Pages for um projeto (ex: seu-usuario.github.io/seu-repo)
+          # e você configurou basePath/assetPrefix, adicione branch: gh-pages para publicar lá.
+          # publish_branch: gh-pages
