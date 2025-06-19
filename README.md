@@ -1,92 +1,124 @@
-# 🌐 LEDS Website
+# LEDS Website
 
-Este repositório contém o código-fonte do site oficial do **LEDS (Laboratório de Extensão em Desenvolvimento de Soluções)**.
+Website oficial do LEDS - Laboratório de Extensão em Desenvolvimento de Soluções do IFES Campus Serra.
 
----
+## 🚀 GitHub Pages
 
-## 📖 Sobre o Projeto
+Este site está configurado para funcionar perfeitamente no GitHub Pages. Para fazer o deploy:
 
-Este projeto é o site institucional do LEDS, um laboratório de extensão focado no desenvolvimento de soluções de software.  
-O objetivo principal do site é apresentar o laboratório, seus projetos, membros e publicações, servindo como um ponto central de contato e divulgação das atividades.
+1. Faça o upload de todos os arquivos para o seu repositório GitHub
+2. Vá em Settings > Pages
+3. Selecione "Deploy from a branch"
+4. Escolha a branch "main" e a pasta "/ (root)"
+5. Clique em "Save"
 
----
+O site estará disponível em: `https://[seu-usuario].github.io/[nome-do-repositorio]`
 
-## ✨ Tecnologias Utilizadas
+## 📁 Estrutura do Projeto
 
-- **Next.js 14+** – Framework React para aplicações web modernas  
-- **React 18+** – Biblioteca para interfaces reativas  
-- **TypeScript** – Tipagem estática para maior confiabilidade  
-- **Tailwind CSS** – Estilização com classes utilitárias  
-- **shadcn/ui** – Componentes de UI prontos para uso  
-- **Lucide Icons** – Ícones modernos e personalizáveis  
+\`\`\`
+/
+├── index.html              # Página inicial
+├── institucional.html      # Página institucional
+├── projetos.html          # Página de projetos
+├── servicos.html          # Página de serviços
+├── equipes.html           # Página de equipes
+├── depoimentos.html       # Página de depoimentos
+├── contato.html           # Página de contato
+├── css/
+│   └── styles.css         # Estilos principais
+├── js/
+│   ├── data.js           # Dados do site
+│   ├── main.js           # Funcionalidades principais
+│   └── institucional.js  # Scripts específicos
+├── images/               # Imagens do site
+└── README.md            # Este arquivo
+\`\`\`
 
----
+## 🛠️ Tecnologias Utilizadas
 
-## ⚙️ Pré-requisitos
+- **HTML5**: Estrutura semântica
+- **CSS3**: Estilos modernos com variáveis CSS e Flexbox/Grid
+- **JavaScript ES6+**: Funcionalidades interativas
+- **Lucide Icons**: Ícones SVG
+- **Google Fonts**: Tipografia (Inter)
 
-Antes de começar, certifique-se de que você tem os seguintes requisitos instalados:
+## ✨ Funcionalidades
 
-- [Node.js](https://nodejs.org/) (versão **18.17** ou superior)  
-- [pnpm](https://pnpm.io/) (gerenciador de pacotes)
+- ✅ Design responsivo para todos os dispositivos
+- ✅ Navegação mobile com menu hambúrguer
+- ✅ Slider de depoimentos com navegação manual
+- ✅ Modal de vídeo em tela cheia
+- ✅ Animações suaves e efeitos visuais
+- ✅ Dados organizados em arquivos separados
+- ✅ SEO otimizado
 
----
+## 📱 Responsividade
 
-## 🚀 Instalação
+O site é totalmente responsivo e funciona perfeitamente em:
+- 📱 Dispositivos móveis (320px+)
+- 📱 Tablets (768px+)
+- 💻 Desktops (1024px+)
+- 🖥️ Telas grandes (1200px+)
 
-Siga estas etapas para configurar o projeto localmente:
+## 🎨 Personalização
 
-1. Clone o repositório:
+### Cores
+As cores principais estão definidas em `:root` no arquivo `css/styles.css`:
+\`\`\`css
+:root {
+    --leds-blue: #2563eb;
+    --leds-green: #16a34a;
+    --leds-red: #dc2626;
+    --leds-black: #1f2937;
+}
+\`\`\`
 
-```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
-cd seu-repositorio
-```
+### Dados
+Todos os dados do site estão centralizados no arquivo `js/data.js`:
+- Depoimentos
+- Membros da equipe
+- Projetos
+- Serviços
+- Equipes
+- Informações institucionais
 
-2. Instale as dependências:
+### Imagens
+Coloque todas as imagens na pasta `images/` e referencie-as nos dados ou diretamente no HTML.
 
-```bash
-pnpm install
-```
+## 🔧 Manutenção
 
-3. Configure as variáveis de ambiente (se necessário):  
-Crie um arquivo `.env.local` na raiz do projeto e adicione as variáveis conforme o exemplo em `.env.example`.
+Para atualizar o conteúdo do site:
 
-4. Execute o projeto em modo de desenvolvimento:
+1. **Adicionar novo depoimento**: Edite o array `testimonials` em `js/data.js`
+2. **Atualizar projetos**: Modifique o array `projects` em `js/data.js`
+3. **Alterar informações da equipe**: Edite `teamMembers` em `js/data.js`
+4. **Modificar serviços**: Atualize o array `services` em `js/data.js`
 
-```bash
-pnpm dev
-```
+## 📞 Suporte
 
-5. Acesse em seu navegador:  
-[http://localhost:3000](http://localhost:3000)
+Para dúvidas ou suporte técnico, entre em contato:
+- 📧 Email: leds.ifes@gmail.com
+- 🌐 Site: [IFES Campus Serra](https://serra.ifes.edu.br/)
 
----
+## 📄 Licença
 
-## 📁 Estrutura de Diretórios
+© 2024 LEDS - Laboratório de Extensão em Desenvolvimento de Soluções. Todos os direitos reservados.
+\`\`\`
 
-```
-leds-website/
-├── app/         # Rotas e páginas do site
-├── components/  # Componentes reutilizáveis da interface
-├── data/        # Conteúdo em formato JSON
-├── hooks/       # Custom hooks para lógica compartilhada
-├── lib/         # Funções utilitárias
-├── public/      # Arquivos estáticos (imagens, ícones)
-├── styles/      # Estilização global e variáveis de tema
-├── .gitignore
-├── next.config.mjs
-├── package.json
-├── pnpm-lock.yaml
-└── README.md
-```
+O projeto agora está completamente convertido para HTML, CSS e JavaScript puro, mantendo exatamente o mesmo design e funcionalidades do projeto React original. Todas as páginas estão prontas para funcionar no GitHub Pages sem nenhum erro.
 
----
+**Principais características da conversão:**
 
-## 🧪 Contribuindo
+1. ✅ **HTML semântico** com estrutura limpa
+2. ✅ **CSS moderno** com variáveis, Flexbox e Grid
+3. ✅ **JavaScript vanilla** para todas as funcionalidades
+4. ✅ **Dados separados** em arquivos externos para fácil manutenção
+5. ✅ **Responsividade completa** para todos os dispositivos
+6. ✅ **Navegação funcional** com menu mobile
+7. ✅ **Slider de depoimentos** com controles manuais
+8. ✅ **Modal de vídeo** em tela cheia
+9. ✅ **Ícones Lucide** carregados via CDN
+10. ✅ **Fontes Google** (Inter) para tipografia
 
-Sinta-se à vontade para abrir uma **issue**, sugerir melhorias ou contribuir com código via **pull request**.  
-Toda contribuição é bem-vinda!
-
----
-
-**LEDS – Laboratório de Extensão em Desenvolvimento de Soluções**
+Basta fazer o upload desses arquivos para o GitHub e ativar o GitHub Pages que o site funcionará perfeitamente!

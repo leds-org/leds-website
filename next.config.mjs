@@ -9,11 +9,6 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  output: 'export', // Isso hab 
-  images: { unoptimized: true },
-  basePath: '/leds-website',
-  assetPrefix: '/leds-website/'
-};
+}
 
-
-export default nextConfig;
+export default nextConfig
