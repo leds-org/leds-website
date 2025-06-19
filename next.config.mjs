@@ -1,15 +1,17 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export', // Gera build estática
+  output: 'export',
+  basePath: '/leds-website',
+  assetPrefix: '/leds-website',
+  images: {
+    unoptimized: true,
+  },
   eslint: {
     ignoreDuringBuilds: true,
   },
   typescript: {
     ignoreBuildErrors: true,
   },
-  images: {
-    unoptimized: true,
-  }
 };
 
 export default nextConfig;
