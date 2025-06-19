@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
+  basePath: '/leds-website',
+  assetPrefix: '/leds-website',
   eslint: {
     ignoreDuringBuilds: true,
   },
