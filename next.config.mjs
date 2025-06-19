@@ -1,8 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  basePath: '/leds-website',
-  assetPrefix: '/leds-website',
   images: {
     unoptimized: true,
   },
@@ -12,6 +10,8 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+  basePath: '',
+  assetPrefix: '/',
 };
 
 export default nextConfig;
