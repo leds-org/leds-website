@@ -7,10 +7,11 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
-    unoptimized: true,
+    unoptimized: true, // Obrigatório para exportação estática
   },
-  basePath: '',
-  assetPrefix: '',
-}
+  output: 'export', // Essencial para gerar HTML estático
+  basePath: '/leds-website', // Subpasta em que o site será servido
+  assetPrefix: '/leds-website/', // Caminho para assets (CSS, JS, imagens)
+};
 
-export default nextConfig
+export default nextConfig;
