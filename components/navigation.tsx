@@ -49,6 +49,15 @@ export default function Navigation() {
                 {item.label}
               </Link>
             ))}
+            {/* Academy link externo */}
+            <a
+              href="http://leds.academy/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm font-medium transition-colors hover:text-blue-600 text-gray-700"
+            >
+              Academy
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -82,6 +91,15 @@ export default function Navigation() {
                   {item.label}
                 </Link>
               ))}
+              {/* Academy link externo */}
+              <a
+                href="http://leds.academy/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block px-3 py-2 text-sm font-medium rounded-md text-gray-700 hover:text-gray-900 hover:bg-gray-50/80"
+              >
+                Academy
+              </a>
             </div>
           </div>
         )}
