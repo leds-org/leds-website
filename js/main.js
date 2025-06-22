@@ -81,24 +81,31 @@ function initTestimonialSlider() {
   const track = document.createElement("div")
   track.className = "testimonial-track"
 
-  // Add testimonials to track
-  testimonials.forEach((testimonial, index) => {
+  // Add testimonials to track (use only first 5 for homepage)
+  const homeTestimonials = testimonials.slice(0, 5)
+
+  homeTestimonials.forEach((testimonial, index) => {
     const card = document.createElement("div")
     card.className = "testimonial-card"
+
+    // Truncate content for homepage
+    const truncatedContent =
+      testimonial.content.length > 200 ? testimonial.content.substring(0, 200) + "..." : testimonial.content
+
     card.innerHTML = `
-            <p class="testimonial-content">${testimonial.content}</p>
-            <div class="testimonial-author">
-                <div class="testimonial-name">${testimonial.name}</div>
-                <div class="testimonial-role">${testimonial.role}</div>
-            </div>
-        `
+      <p class="testimonial-content">${truncatedContent}</p>
+      <div class="testimonial-author">
+        <div class="testimonial-name">${testimonial.name}</div>
+        <div class="testimonial-role">${testimonial.role}</div>
+      </div>
+    `
     track.appendChild(card)
   })
 
   container.appendChild(track)
 
   // Create dots
-  testimonials.forEach((_, index) => {
+  homeTestimonials.forEach((_, index) => {
     const dot = document.createElement("button")
     dot.className = "testimonial-dot"
     if (index === 0) dot.classList.add("active")
@@ -119,12 +126,12 @@ function initTestimonialSlider() {
   }
 
   function nextSlide() {
-    currentIndex = (currentIndex + 1) % testimonials.length
+    currentIndex = (currentIndex + 1) % homeTestimonials.length
     goToSlide(currentIndex)
   }
 
   function prevSlide() {
-    currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length
+    currentIndex = (currentIndex - 1 + homeTestimonials.length) % homeTestimonials.length
     goToSlide(currentIndex)
   }
 
@@ -132,8 +139,8 @@ function initTestimonialSlider() {
   nextBtn.addEventListener("click", nextSlide)
   prevBtn.addEventListener("click", prevSlide)
 
-  // Auto-advance (optional)
-  // setInterval(nextSlide, 5000);
+  // Auto-advance every 5 seconds
+  setInterval(nextSlide, 5000)
 }
 
 // Video modal functionality

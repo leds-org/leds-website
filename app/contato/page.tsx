@@ -105,7 +105,7 @@ export default function ContatoPage() {
 
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Contact Form */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-2 space-y-8">
             <Card className="bg-white/80 backdrop-blur-sm border-gray-200/70 shadow-xl hover:shadow-2xl transition-shadow duration-300">
               <CardHeader className="bg-gradient-to-r from-blue-600 to-green-600 text-white rounded-t-lg">
                 <CardTitle className="text-2xl flex items-center">
@@ -191,6 +191,30 @@ export default function ContatoPage() {
                 </form>
               </CardContent>
             </Card>
+
+            {/* Map Section */}
+            <Card className="bg-white/80 backdrop-blur-sm border-gray-200/70 shadow-xl">
+              <CardHeader>
+                <CardTitle className="text-xl text-gray-900 flex items-center">
+                  <MapPin className="mr-2 h-5 w-5 text-blue-600" />
+                  Localização - LEDS Serra
+                </CardTitle>
+                <p className="text-sm text-gray-600">
+                  Av. dos Sabiás, 330 - Morada de Laranjeiras, Serra - ES, 29166-630
+                </p>
+              </CardHeader>
+              <CardContent className="p-0">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3742.8234567890123!2d-40.2987654!3d-20.1234567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sAv.%20dos%20Sabi%C3%A1s%2C%20330%20-%20Morada%20de%20Laranjeiras%2C%20Serra%20-%20ES%2C%2029166-630!5e0!3m2!1spt-BR!2sbr!4v1234567890123!5m2!1spt-BR!2sbr"
+                  width="100%"
+                  height="300"
+                  style={{ border: 0, borderRadius: "0 0 var(--radius) var(--radius)" }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </CardContent>
+            </Card>
           </div>
 
           {/* Contact Information Sidebar */}
@@ -261,7 +285,7 @@ export default function ContatoPage() {
                 <p className="text-sm text-gray-600">Siga-nos para ficar por dentro das novidades!</p>
               </CardHeader>
               <CardContent>
-                <div className="grid grid-cols-2 gap-3">
+                <div className="flex gap-3 justify-center">
                   {socialLinks.map((social, index) => {
                     const IconComponent = social.icon
                     return (
@@ -270,10 +294,9 @@ export default function ContatoPage() {
                         href={social.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`flex items-center space-x-2 p-3 rounded-lg border border-gray-200/70 bg-white/60 backdrop-blur-sm ${social.color} transition-all duration-300 hover:scale-105 hover:shadow-md`}
+                        className={`flex items-center justify-center w-12 h-12 rounded-lg border border-gray-200/70 bg-white/60 backdrop-blur-sm ${social.color} transition-all duration-300 hover:scale-105 hover:shadow-md`}
                       >
                         <IconComponent className={`h-5 w-5 ${social.iconColor}`} />
-                        <span className="font-medium text-gray-700 text-sm">{social.name}</span>
                       </a>
                     )
                   })}

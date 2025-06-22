@@ -33,6 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
   loadPillars()
   loadCampuses()
   loadAreas()
+  lucide.createIcons()
 })
 
 function loadPillars() {
@@ -58,8 +59,6 @@ function loadPillars() {
 
     pillarsGrid.appendChild(pillarCard)
   })
-
-  lucide.createIcons()
 }
 
 function loadCampuses() {
@@ -87,8 +86,6 @@ function loadCampuses() {
 
     campusesGrid.appendChild(campusCard)
   })
-
-  lucide.createIcons()
 }
 
 function loadAreas() {
@@ -113,6 +110,23 @@ function loadAreas() {
 
     areasGrid.appendChild(areaCard)
   })
+}
 
+function toggleAccordion(button) {
+  const accordionItem = button.parentElement
+  const content = accordionItem.querySelector(".accordion-content")
+  const isActive = accordionItem.classList.contains("active")
+
+  // Close all accordion items
+  document.querySelectorAll(".accordion-item").forEach((item) => {
+    item.classList.remove("active")
+  })
+
+  // Open clicked item if it wasn't active
+  if (!isActive) {
+    accordionItem.classList.add("active")
+  }
+
+  // Update icons
   lucide.createIcons()
 }

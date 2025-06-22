@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - LEDS</title>
+    <meta name="description" content="Entre em contato com o LEDS - Laboratório de Extensão em Desenvolvimento de Soluções">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/lucide.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-content">
+                <a href="index.html" class="nav-logo">
+                    <img src="images/leds-logo-transparent.png" alt="LEDS Logo" class="logo-img">
+                </a>
+                
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">Início</a>
+                    <a href="institucional.html" class="nav-link">Institucional</a>
+                    <a href="projetos.html" class="nav-link">Projetos</a>
+                    <a href="servicos.html" class="nav-link">Serviços</a>
+                    <a href="equipes.html" class="nav-link">Equipes</a>
+                    <a href="https://leds.academy/" target="_blank" class="nav-link">Academy</a>
+                    <a href="depoimentos.html" class="nav-link">Depoimentos</a>
+                    <a href="contato.html" class="nav-link active">Contato</a>
+                </div>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+            
+            <div class="mobile-menu" id="mobileMenu">
+                <a href="index.html" class="mobile-link">Início</a>
+                <a href="institucional.html" class="mobile-link">Institucional</a>
+                <a href="projetos.html" class="mobile-link">Projetos</a>
+                <a href="servicos.html" class="mobile-link">Serviços</a>
+                <a href="equipes.html" class="mobile-link">Equipes</a>
+                <a href="https://leds.academy/" target="_blank" class="mobile-link">Academy</a>
+                <a href="depoimentos.html" class="mobile-link">Depoimentos</a>
+                <a href="contato.html" class="mobile-link active">Contato</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container" style="padding: 5rem 1rem;">
+            <!-- Header -->
+            <div class="section-header">
+                <div style="display: inline-flex; align-items: center; justify-content: center; width: 4rem; height: 4rem; background: linear-gradient(135deg, var(--leds-blue), var(--leds-green)); border-radius: 50%; margin-bottom: 1.5rem;">
+                    <i data-lucide="message-circle" style="color: white; width: 2rem; height: 2rem;"></i>
+                </div>
+                <h1 class="section-title">Entre em Contato</h1>
+                <p class="section-subtitle">
+                    Tem alguma dúvida ou quer saber mais sobre nossos projetos e produtos? Entre em contato conosco!
+                </p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 2rem; align-items: start;">
+                <!-- Contact Form -->
+                <div class="card">
+                    <div class="card-header" style="background: linear-gradient(135deg, var(--leds-blue), var(--leds-green)); color: white; border-radius: var(--radius) var(--radius) 0 0;">
+                        <h2 style="display: flex; align-items: center; gap: 0.75rem; color: white; margin: 0;">
+                            <i data-lucide="send"></i>
+                            Envie uma Mensagem
+                        </h2>
+                        <p style="color: rgba(255, 255, 255, 0.8); margin: 0.5rem 0 0;">Preencha o formulário abaixo e entraremos em contato em breve</p>
+                    </div>
+                    <div class="card-content">
+                        <form onsubmit="handleFormSubmit(event)" style="display: flex; flex-direction: column; gap: 1.5rem;">
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+                                <div>
+                                    <label for="name" style="display: block; font-weight: 500; color: var(--gray-700); margin-bottom: 0.5rem;">Nome Completo *</label>
+                                    <input type="text" id="name" name="name" required 
+                                           style="width: 100%; padding: 0.75rem; border: 1px solid var(--gray-300); border-radius: var(--radius); background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px);"
+                                           placeholder="Digite seu nome completo">
+                                </div>
+                                <div>
+                                    <label for="email" style="display: block; font-weight: 500; color: var(--gray-700); margin-bottom: 0.5rem;">Email *</label>
+                                    <input type="email" id="email" name="email" required 
+                                           style="width: 100%; padding: 0.75rem; border: 1px solid var(--gray-300); border-radius: var(--radius); background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px);"
+                                           placeholder="seu@email.com">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="subject" style="display: block; font-weight: 500; color: var(--gray-700); margin-bottom: 0.5rem;">Assunto *</label>
+                                <input type="text" id="subject" name="subject" required 
+                                       style="width: 100%; padding: 0.75rem; border: 1px solid var(--gray-300); border-radius: var(--radius); background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px);"
+                                       placeholder="Assunto da sua mensagem">
+                            </div>
+
+                            <div>
+                                <label for="message" style="display: block; font-weight: 500; color: var(--gray-700); margin-bottom: 0.5rem;">Mensagem *</label>
+                                <textarea id="message" name="message" required rows="6"
+                                          style="width: 100%; padding: 0.75rem; border: 1px solid var(--gray-300); border-radius: var(--radius); background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); resize: vertical;"
+                                          placeholder="Descreva sua dúvida, interesse ou como podemos ajudá-lo..."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1rem; font-size: 1.125rem;">
+                                <i data-lucide="send"></i>
+                                Enviar Mensagem
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Contact Information Sidebar -->
+                <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                    <!-- Contact Details -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 style="display: flex; align-items: center; gap: 0.5rem; color: var(--gray-900); margin: 0;">
+                                <i data-lucide="phone" style="color: var(--leds-blue);"></i>
+                                Informações de Contato
+                            </h3>
+                        </div>
+                        <div class="card-content" style="display: flex; flex-direction: column; gap: 1rem;">
+                            <a href="mailto:leds.ifes@gmail.com" style="display: flex; align-items: center; gap: 1rem; padding: 0.75rem; border-radius: var(--radius); background: var(--gray-50); text-decoration: none; transition: background 0.3s ease;">
+                                <div style="padding: 0.5rem; background: linear-gradient(135deg, var(--leds-blue), var(--leds-green)); border-radius: var(--radius);">
+                                    <i data-lucide="mail" style="color: white; width: 1rem; height: 1rem;"></i>
+                                </div>
+                                <div>
+                                    <h4 style="font-weight: 600; color: var(--gray-900); margin: 0;">Email</h4>
+                                    <p style="font-size: 0.875rem; color: var(--gray-600); margin: 0;">leds.ifes@gmail.com</p>
+                                </div>
+                            </a>
+
+                            <a href="tel:+552731490700" style="display: flex; align-items: center; gap: 1rem; padding: 0.75rem; border-radius: var(--radius); background: var(--gray-50); text-decoration: none; transition: background 0.3s ease;">
+                                <div style="padding: 0.5rem; background: linear-gradient(135deg, var(--leds-green), var(--leds-blue)); border-radius: var(--radius);">
+                                    <i data-lucide="phone" style="color: white; width: 1rem; height: 1rem;"></i>
+                                </div>
+                                <div>
+                                    <h4 style="font-weight: 600; color: var(--gray-900); margin: 0;">Telefone</h4>
+                                    <p style="font-size: 0.875rem; color: var(--gray-600); margin: 0;">(27) 3149-0700</p>
+                                </div>
+                            </a>
+
+                            <div style="display: flex; align-items: flex-start; gap: 1rem; padding: 0.75rem; border-radius: var(--radius); background: var(--gray-50);">
+                                <div style="padding: 0.5rem; background: linear-gradient(135deg, var(--leds-red), var(--leds-blue)); border-radius: var(--radius);">
+                                    <i data-lucide="map-pin" style="color: white; width: 1rem; height: 1rem;"></i>
+                                </div>
+                                <div>
+                                    <h4 style="font-weight: 600; color: var(--gray-900); margin: 0;">Endereço</h4>
+                                    <p style="font-size: 0.875rem; color: var(--gray-600); margin: 0;">Av. dos Sabiás, 330 - Morada de Laranjeiras, Serra - ES, 29166-630</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Office Hours -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 style="display: flex; align-items: center; gap: 0.5rem; color: var(--gray-900); margin: 0;">
+                                <i data-lucide="clock" style="color: var(--leds-green);"></i>
+                                Horário de Atendimento
+                            </h3>
+                        </div>
+                        <div class="card-content" style="display: flex; flex-direction: column; gap: 0.75rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.75rem; background: rgba(34, 197, 94, 0.1); border-radius: var(--radius);">
+                                <span style="font-weight: 500; color: var(--gray-700);">Segunda - Sexta:</span>
+                                <span style="font-weight: 700; color: rgb(21, 128, 61);">08:00 - 18:00</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.75rem; background: var(--gray-50); border-radius: var(--radius);">
+                                <span style="font-weight: 500; color: var(--gray-700);">Fins de semana:</span>
+                                <span style="font-weight: 500; color: var(--gray-500);">Fechado</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Media -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 style="color: var(--gray-900); margin: 0;">Redes Sociais</h3>
+                            <p style="font-size: 0.875rem; color: var(--gray-600); margin: 0.5rem 0 0;">Siga-nos para ficar por dentro das novidades!</p>
+                        </div>
+                        <div class="card-content">
+                            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem;">
+                                <a href="https://github.com/leds-org" target="_blank" style="display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem; border-radius: var(--radius); border: 1px solid var(--gray-200); background: rgba(255, 255, 255, 0.6); text-decoration: none; transition: all 0.3s ease;">
+                                    <i data-lucide="github" style="color: var(--gray-700);"></i>
+                                    <span style="font-weight: 500; color: var(--gray-700); font-size: 0.875rem;">GitHub</span>
+                                </a>
+                                <a href="https://br.linkedin.com/school/ledsifes/" target="_blank" style="display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem; border-radius: var(--radius); border: 1px solid var(--gray-200); background: rgba(255, 255, 255, 0.6); text-decoration: none; transition: all 0.3s ease;">
+                                    <i data-lucide="linkedin" style="color: var(--leds-blue);"></i>
+                                    <span style="font-weight: 500; color: var(--gray-700); font-size: 0.875rem;">LinkedIn</span>
+                                </a>
+                                <a href="https://www.instagram.com/ledsifes/" target="_blank" style="display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem; border-radius: var(--radius); border: 1px solid var(--gray-200); background: rgba(255, 255, 255, 0.6); text-decoration: none; transition: all 0.3s ease;">
+                                    <i data-lucide="instagram" style="color: #e1306c;"></i>
+                                    <span style="font-weight: 500; color: var(--gray-700); font-size: 0.875rem;">Instagram</span>
+                                </a>
+                                <a href="https://www.youtube.com/@ledsifes" target="_blank" style="display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem; border-radius: var(--radius); border: 1px solid var(--gray-200); background: rgba(255, 255, 255, 0.6); text-decoration: none; transition: all 0.3s ease;">
+                                    <i data-lucide="youtube" style="color: var(--leds-red);"></i>
+                                    <span style="font-weight: 500; color: var(--gray-700); font-size: 0.875rem;">YouTube</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map Section -->
+            <section style="margin-top: 3rem;">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 style="display: flex; align-items: center; gap: 0.75rem; color: var(--gray-900); margin: 0;">
+                            <i data-lucide="map-pin" style="color: var(--leds-blue);"></i>
+                            Localização - LEDS Serra
+                        </h2>
+                        <p style="color: var(--gray-600); margin: 0.5rem 0 0;">Av. dos Sabiás, 330 - Morada de Laranjeiras, Serra - ES, 29166-630</p>
+                    </div>
+                    <div class="card-content" style="padding: 0;">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3742.8234567890123!2d-40.2987654!3d-20.1234567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sAv.%20dos%20Sabi%C3%A1s%2C%20330%20-%20Morada%20de%20Laranjeiras%2C%20Serra%20-%20ES%2C%2029166-630!5e0!3m2!1spt-BR!2sbr!4v1234567890123!5m2!1spt-BR!2sbr"
+                            width="100%" 
+                            height="300" 
+                            style="border: 0; border-radius: 0 0 var(--radius) var(--radius);" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA Section -->
+            <section style="margin-top: 4rem;">
+                <div class="card" style="background: linear-gradient(135deg, var(--leds-blue), var(--leds-green), var(--leds-red)); border: 0; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);">
+                    <div class="card-content" style="padding: 3rem; text-align: center; color: white;">
+                        <h2 style="font-size: 2rem; font-weight: 700; margin-bottom: 1rem;">Pronto para inovar conosco?</h2>
+                        <p style="font-size: 1.125rem; color: rgba(255, 255, 255, 0.8); margin-bottom: 2rem; max-width: 32rem; margin-left: auto; margin-right: auto;">
+                            Junte-se ao LEDS e faça parte da transformação digital. Vamos desenvolver soluções incríveis juntos!
+                        </p>
+                        <div style="display: flex; flex-direction: column; gap: 1rem; align-items: center;">
+                            <a href="projetos.html" class="btn" style="background: white; color: var(--leds-blue); padding: 0.75rem 2rem; border-radius: var(--radius); text-decoration: none; font-weight: 500;">
+                                Conheça Nossos Projetos
+                            </a>
+                            <a href="servicos.html" class="btn" style="background: var(--gray-800); color: white; padding: 0.75rem 2rem; border-radius: var(--radius); text-decoration: none; font-weight: 500; border: 0;">
+                                Ver Serviços
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid-new">
+                <div class="footer-section-main">
+                    <img src="images/leds-logo-transparent.png" alt="LEDS Logo" class="footer-logo">
+                    <h3 class="footer-title">LEDS</h3>
+                    <p class="footer-text">
+                        Laboratório de Extensão em Desenvolvimento de Soluções - IFES Campus Serra
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="footer-title">Contato</h3>
+                    <div class="footer-contact">
+                        <p class="footer-contact-item">
+                            <i data-lucide="mail"></i>
+                            leds.ifes@gmail.com
+                        </p>
+                        <p class="footer-contact-item">
+                            <i data-lucide="phone"></i>
+                            (27) 3149-0700
+                        </p>
+                        <p class="footer-contact-item">
+                            <i data-lucide="map-pin"></i>
+                            IFES Campus Serra
+                        </p>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="footer-title">Redes Sociais</h3>
+                    <div class="footer-social">
+                        <a href="https://github.com/leds-org" target="_blank" class="social-link">
+                            <i data-lucide="github"></i>
+                        </a>
+                        <a href="https://br.linkedin.com/school/ledsifes/" target="_blank" class="social-link">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+                        <a href="https://www.instagram.com/ledsifes/" target="_blank" class="social-link">
+                            <i data-lucide="instagram"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@ledsifes" target="_blank" class="social-link">
+                            <i data-lucide="youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    © 2024 LEDS - Laboratório de Extensão em Desenvolvimento de Soluções. Todos os direitos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData);
+            
+            // Here you would typically send the data to a server
+            console.log('Form submitted:', data);
+            
+            // Show success message
+            alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
+            
+            // Reset form
+            event.target.reset();
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+        });
+    </script>
+</body>
+</html>

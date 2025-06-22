@@ -37,6 +37,13 @@ Destaque para os projetos com o Banco do Nordeste e o Conecta FAPES.`,
     location: "LEDS Colatina",
   },
   {
+    name: "Vinícius",
+    role: "Ex-integrante LEDS Serra",
+    content:
+      "O LEDS me proporcionou alguns atalhos na minha carreira. Isso não significa que tornou o caminho mais fácil, mas sim que me permitiu ter maiores responsabilidades na área de desenvolvimento de software logo no início. Em um ambiente com projetos reais, tive a oportunidade de aprimorar minhas habilidades como desenvolvedor, entendendo que a tecnologia é apenas uma ferramenta para resolver dores reais da nossa sociedade.\n\nPude vivenciar problemas reais, levantar requisitos, conversar com os clientes, participar ativamente do desenvolvimento da solução, liderar uma equipe de desenvolvedores, atuar em um time multidisciplinar e apresentar o produto ao cliente. Em qualquer outra empresa, levaria anos para ter acesso a tantas frentes de atuação diferentes.\n\nO LEDS também me ensinou o valor de se arriscar em um ambiente onde os erros não são punidos, mas transformados em aprendizados que no futuro servem como guia para os novos integrantes.",
+    location: "LEDS Serra",
+  },
+  {
     name: "Ex-LEDS",
     role: "Desenvolvedor – Empresa nos EUA",
     content: `O LEDS definitivamente é uma faculdade dentro do IFES.

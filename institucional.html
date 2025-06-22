@@ -26,6 +26,7 @@
                     <a href="projetos.html" class="nav-link">Projetos</a>
                     <a href="servicos.html" class="nav-link">Serviços</a>
                     <a href="equipes.html" class="nav-link">Equipes</a>
+                    <a href="https://leds.academy/" target="_blank" class="nav-link">Academy</a>
                     <a href="depoimentos.html" class="nav-link">Depoimentos</a>
                     <a href="contato.html" class="nav-link">Contato</a>
                 </div>
@@ -41,6 +42,7 @@
                 <a href="projetos.html" class="mobile-link">Projetos</a>
                 <a href="servicos.html" class="mobile-link">Serviços</a>
                 <a href="equipes.html" class="mobile-link">Equipes</a>
+                <a href="https://leds.academy/" target="_blank" class="mobile-link">Academy</a>
                 <a href="depoimentos.html" class="mobile-link">Depoimentos</a>
                 <a href="contato.html" class="mobile-link">Contato</a>
             </div>
@@ -57,104 +59,253 @@
                 </p>
             </div>
 
-            <!-- História -->
-            <section style="margin-bottom: 4rem;">
-                <div class="card">
-                    <div class="card-header">
-                        <h2 class="card-title" style="display: flex; align-items: center; gap: 0.75rem;">
-                            <i data-lucide="calendar" style="color: var(--leds-blue);"></i>
-                            Nossa História
-                        </h2>
+            <!-- Sobre o LEDS - Nova seção com layout lado a lado -->
+            <section class="institutional-about-section">
+                <div class="institutional-about-grid">
+                    <div class="institutional-about-content">
+                        <h2>Sobre o LEDS</h2>
+                        <div class="content-text">
+                            <p>O Laboratório de Extensão e Desenvolvimento de Soluções (LEDS) é um programa de extensão ligado ao Instituto Federal do Espírito Santo Campus Serra que funciona atualmente na sala 804, localizado no bloco 8.</p>
+                            <p>Criado em 2012, atualmente o programa conta com a participação de oito professores e 21 alunos, que atuam de forma interdisciplinar nos projetos. O Laboratório visa fazer a conexão, por meio de projetos, de demandas de entidades governamentais, empresas e organizações sociais com alunos e professores.</p>
+                        </div>
                     </div>
-                    <div class="card-content">
-                        <div style="display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.5rem;">
-                            <span class="badge" style="background: var(--gray-800); color: var(--white);">2012</span>
-                            <div>
-                                <p style="color: var(--gray-700); line-height: 1.6;">
-                                    O LEDS foi criado em <strong>2012</strong> no IFES Campus Serra com o intuito de solucionar
-                                    problemas reais, integrando ensino, pesquisa e extensão. Desde sua fundação, o laboratório tem se
-                                    dedicado ao desenvolvimento de soluções inovadoras que atendam às demandas da sociedade e do
-                                    mercado.
-                                </p>
+                    <div class="institutional-about-image">
+                        <div class="card">
+                            <img src="images/leds-office-logo.png" alt="Logo e ambiente do LEDS">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Accordion Sections -->
+            <div class="accordion-container">
+                
+                <!-- Conceito -->
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <i data-lucide="lightbulb" class="accordion-icon"></i>
+                        <h2>Conceito</h2>
+                        <i data-lucide="chevron-down" class="accordion-chevron"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p>Embora saibamos que há uma grande confiança no papel da Educação para o desenvolvimento da sociedade, no nosso laboratório trazemos à luz uma forma muito simples, direta e prática de expressão desse papel: a sociedade traz um problema, e, com o LEDS, estuda/aprende/propõe uma solução, que pode se apresentar como um produto, sistema, serviço, método ou modelo.</p>
+                            <p>Muito se fala hoje da necessidade de unir ensino, pesquisa e extensão. No LEDS, essa união se dará na ordem extensão (a comunidade traz o problema), pesquisa (o conhecimento) e ensino (os alunos e professores pesquisam e aprendem o necessário para desenvolver soluções) e extensão (os resultados da pesquisa-ensino são devolvidos à sociedade).</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- O significado por trás da sigla LEDS -->
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <i data-lucide="zap" class="accordion-icon"></i>
+                        <h2>O significado por trás da sigla LEDS: Liderar e iluminar</h2>
+                        <i data-lucide="chevron-down" class="accordion-chevron"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p>A relação do Laboratório LEDS com a tecnologia LED traz analogias bastante significativas. LED vem do verbo inglês "to lead", que significa liderar. "Leaders" em inglês significa líderes, aqueles que lideram. LED é também um diodo emissor de luz. Equipamentos e dispositivos como lâmpadas ou telas de LED são compostas de vários desses pequenos pontos de luz. Dessa forma LEDS é um conjunto de emissores de Luz, e é assim que vemos cada um dos integrantes do laboratório, como líderes e como pessoas capazes de brilhar. E essa metáfora não nos é tão cara sem motivo.</p>
+                            <p>O conceito "Emissor de Luz" vem em contraposição ao significado da palavra Aluno, que significa "sem luz", ou então "sem conhecimento" (A - sem, Luno - Luz). O aluno na educação tradicional é alguém que não brilha, que não tem conhecimento, nem atuação. No LEDS, por outro lado, os "alunos" são LEDS! Não são aqueles sem luz, são aqueles que iluminam, e são protagonistas.</p>
+                            <p>Essa analogia com o dispositivo LED também remete ao espírito colaborativo do laboratório. Lâmpadas LED precisam de vários diodos para iluminar. Um LED sozinho não ilumina, pois emitem pouca luz, mas o conjunto deles sim, é capaz de iluminar um grande ambiente. Isso denota o nosso espírito colaborativo. Ninguém faz nada sozinho. Nossa força está na união. Não é só o professor que brilha no centro de uma sala de aula, mas sim todos, estudantes e professores, são responsáveis por emitir luz sobre o desconhecido.</p>
+                            <p>LEDS tem como objetivo disseminar conhecimentos, difundir novas ideias e transformar a realidade local.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- O que significa o símbolo do LEDS -->
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <i data-lucide="wind" class="accordion-icon"></i>
+                        <h2>O que significa o símbolo do LEDS?</h2>
+                        <i data-lucide="chevron-down" class="accordion-chevron"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p>O símbolo do LEDS é composto pela junção de três elementos, cada um de uma cor, unidos em função de um centro. Esses três elementos representam o Ensino, Pesquisa e Extensão unidos em função da Educação. Mas o símbolo não apenas representa a simples junção deles, mas também a integração entre eles. O símbolo forma um catavento, que remete à dinamicidade e interação entre ensino, pesquisa e extensão. Cada um deles forma uma hélice do catavento, dessa forma são igualmente responsáveis por fazer o catavento girar.</p>
+                            <p>Além disso, o símbolo do catavento traz outro significado importante que representa bastante o espírito do laboratório. O catavento precisa de um elemento externo para girar, no caso, o vento. Ele não gira sozinho. Se não houver vento, ele não gira, fica parado. Da mesma forma, a educação não acontece, o ensino, pesquisa e extensão não "giram" sem o elemento externo chamado sociedade. A sociedade é o vento que faz nosso catavento girar. O contato com a realidade, problemas reais, demandas reais é o que nos movimenta, o que nos desenvolve e nos faz aprender.</p>
+                            <p>Por fim, além de girar, o catavento possui uma função bastante importante. Ele gera resultados a partir do movimento. A partir da movimentação ele é responsável por gerar energia. Isso representa o retorno que damos à sociedade. Ela nos movimenta e nós geramos "energia" para ela, ou seja, geramos soluções. A interação com a sociedade é nossa fonte de energia.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Visão e Missão -->
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <i data-lucide="target" class="accordion-icon"></i>
+                        <h2>Visão e Missão</h2>
+                        <i data-lucide="chevron-down" class="accordion-chevron"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <div class="mission-vision-grid">
+                                <div class="mission-card">
+                                    <h3><i data-lucide="compass"></i> Nossa Missão</h3>
+                                    <p>"Prover aprendizado colaborativo num ambiente inovador com práticas que visam a resolução de problemas reais trazidos pela sociedade"</p>
+                                </div>
+                                <div class="vision-card">
+                                    <h3><i data-lucide="eye"></i> Nossa Visão</h3>
+                                    <p>"Desenvolver a realidade local por meio da Integração do Ensino, Pesquisa e Extensão"</p>
+                                </div>
                             </div>
                         </div>
-                        <div style="margin-top: 1.5rem; padding: 1rem; background: var(--gray-50); border-radius: var(--radius);">
-                            <p style="color: var(--gray-700); line-height: 1.6;">
-                                Ao longo dos anos, o LEDS consolidou-se como um centro de excelência em desenvolvimento de software,
-                                formando profissionais qualificados e desenvolvendo projetos que impactam positivamente a comunidade e
-                                o setor público.
-                            </p>
+                    </div>
+                </div>
+
+                <!-- Valores e Princípios -->
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <i data-lucide="heart" class="accordion-icon"></i>
+                        <h2>Valores e Princípios</h2>
+                        <i data-lucide="chevron-down" class="accordion-chevron"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <div class="values-section">
+                                <h3><i data-lucide="star"></i> Valores</h3>
+                                <ul class="values-list">
+                                    <li><strong>Pensamento crítico e criativo</strong> mais que técnicas e métodos</li>
+                                    <li><strong>Integração de conhecimento</strong> mais que conhecimento isolado</li>
+                                    <li><strong>Trabalho em equipe</strong> mais que individualismo</li>
+                                    <li><strong>Resolução de problema</strong> mais que estudos teóricos</li>
+                                </ul>
+                                <p><em>Ou seja, mesmo havendo valor nos itens à direita, valorizamos mais os itens à esquerda.</em></p>
+                            </div>
+
+                            <div class="principles-section">
+                                <h3><i data-lucide="compass"></i> Princípios</h3>
+                                <div class="principles-grid">
+                                    <div class="principle-item">
+                                        <h4>A Força está em Todos</h4>
+                                        <p>Quando colaboramos e nos unimos ampliamos o alcance de nossas ações. Além disso, todos possuem o potencial para realizar algo, sem distinção.</p>
+                                    </div>
+                                    <div class="principle-item">
+                                        <h4>Antes de tudo, somos todos aprendizes</h4>
+                                        <p>Antes dos títulos e funções como professores, alunos, pesquisadores, clientes, somos aprendizes. Todo mundo tem alguma coisa para aprender, e todo mundo tem algo para ensinar.</p>
+                                    </div>
+                                    <div class="principle-item">
+                                        <h4>Empatia transforma o mundo</h4>
+                                        <p>Precisamos conhecer os problemas que a sociedade nos traz e as pessoas da comunidade atingidas por eles. Quem se importa tem motivação.</p>
+                                    </div>
+                                    <div class="principle-item">
+                                        <h4>Respeitamos as individualidades</h4>
+                                        <p>Nossa equipe é formada por pessoas diferentes, e o respeito pelos talentos e pelas limitações de cada um deve estar sempre em foco.</p>
+                                    </div>
+                                    <div class="principle-item">
+                                        <h4>O erro pode ser transformado em aprendizado</h4>
+                                        <p>Quem muito teme o erro não tenta. Por isso, não temos medo de errar. Antes feito que perfeito!</p>
+                                    </div>
+                                    <div class="principle-item">
+                                        <h4>Conhecimento não é propriedade, é responsabilidade</h4>
+                                        <p>O que sabemos deve estar a serviço da vida, da melhoria das condições sociais, da resolução de problemas concretos.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </section>
 
-            <!-- Missão e Visão -->
-            <section style="margin-bottom: 4rem;">
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-                    <div class="card">
-                        <div class="card-header">
-                            <h3 class="card-title" style="display: flex; align-items: center; gap: 0.75rem;">
-                                <i data-lucide="target" style="color: var(--leds-green);"></i>
-                                Missão
-                            </h3>
-                        </div>
-                        <div class="card-content">
-                            <p style="color: var(--gray-700); line-height: 1.6;">
-                                Desenvolver soluções tecnológicas inovadoras através da integração entre ensino, pesquisa e extensão,
-                                contribuindo para a formação de profissionais qualificados e para o desenvolvimento da sociedade.
-                            </p>
+                <!-- Nossa Rede -->
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <i data-lucide="map-pin" class="accordion-icon"></i>
+                        <h2>Nossa Rede</h2>
+                        <i data-lucide="chevron-down" class="accordion-chevron"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <div class="network-grid">
+                                <div class="network-card serra">
+                                    <div class="network-icon">
+                                        <i data-lucide="map-pin"></i>
+                                    </div>
+                                    <h3>LEDS Serra</h3>
+                                    <p>Campus principal do LEDS, onde iniciou suas atividades em 2012</p>
+                                    <span class="network-address">IFES Campus Serra - Rodovia ES-010, Km 6,5 - Manguinhos, Serra - ES</span>
+                                </div>
+                                <div class="network-card colatina">
+                                    <div class="network-icon">
+                                        <i data-lucide="map-pin"></i>
+                                    </div>
+                                    <h3>LEDS Colatina</h3>
+                                    <p>Unidade focada em desenvolvimento de software e inteligência artificial</p>
+                                    <span class="network-address">IFES Campus Colatina - Av. Arino Gomes Leal, 1700 - Santa Margarida, Colatina - ES</span>
+                                </div>
+                                <div class="network-card cachoeiro">
+                                    <div class="network-icon">
+                                        <i data-lucide="map-pin"></i>
+                                    </div>
+                                    <h3>LEDS Cachoeiro de Itapemirim</h3>
+                                    <p>Unidade especializada em automação e sistemas embarcados</p>
+                                    <span class="network-address">IFES Campus Cachoeiro - Rod. ES-482 (Cachoeiro-Alegre) - Fazenda Morro Grande, Cachoeiro de Itapemirim - ES</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="card">
-                        <div class="card-header">
-                            <h3 class="card-title" style="display: flex; align-items: center; gap: 0.75rem;">
-                                <i data-lucide="lightbulb" style="color: var(--leds-red);"></i>
-                                Visão
-                            </h3>
-                        </div>
-                        <div class="card-content">
-                            <p style="color: var(--gray-700); line-height: 1.6;">
-                                Ser reconhecido como um centro de excelência em desenvolvimento de soluções tecnológicas, referência
-                                em inovação e formação de profissionais na área de tecnologia da informação.
-                            </p>
+                <!-- Perguntas Frequentes -->
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <i data-lucide="help-circle" class="accordion-icon"></i>
+                        <h2>Perguntas Frequentes</h2>
+                        <i data-lucide="chevron-down" class="accordion-chevron"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <div class="faq-list">
+                                <div class="faq-item">
+                                    <h4>Quando é aberto um processo seletivo de participantes/alunos de projetos?</h4>
+                                    <p>O LEDS abre seleção sempre que tem a necessidade de renovar seus alunos para desenvolver os projetos que estão em previsão de começar ou que já estão em andamento.</p>
+                                </div>
+                                <div class="faq-item">
+                                    <h4>Como os alunos são selecionados?</h4>
+                                    <p>O LEDS seleciona alunos por meio de um formulário de inscrição disponível no site do LEDS. Após essa etapa os alunos são chamados para uma entrevista.</p>
+                                </div>
+                                <div class="faq-item">
+                                    <h4>Onde encontro o resultado da seleção do processo seletivo?</h4>
+                                    <p>O resultado é disponibilizado no site do LEDS.</p>
+                                </div>
+                                <div class="faq-item">
+                                    <h4>Ganho bolsa ao participar de um projeto do LEDS?</h4>
+                                    <p>Alguns projetos são contemplados com bolsas outros não, então a existência de remuneração ou não é variável de acordo com o projeto.</p>
+                                </div>
+                                <div class="faq-item">
+                                    <h4>Que atividades serão desenvolvidas no LEDS?</h4>
+                                    <p>O aluno terá a oportunidade de vivenciar a dinâmica do laboratório com atividades inerentes ao mesmo e participar de um projeto com demanda real.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </section>
 
-            <!-- Pilares -->
-            <section style="margin-bottom: 4rem;">
-                <h2 style="font-size: 2rem; font-weight: 700; text-align: center; margin-bottom: 2rem; color: var(--gray-900);">Nossos Pilares</h2>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;" id="pillarsGrid">
-                    <!-- Pillars will be loaded by JavaScript -->
-                </div>
-            </section>
-
-            <!-- Campi do LEDS -->
-            <section style="margin-bottom: 4rem;">
-                <h2 style="font-size: 2rem; font-weight: 700; text-align: center; margin-bottom: 2rem; color: var(--gray-900);">Nossos Campi</h2>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;" id="campusesGrid">
-                    <!-- Campuses will be loaded by JavaScript -->
-                </div>
-            </section>
-
-            <!-- Áreas de Atuação -->
-            <section>
-                <h2 style="font-size: 2rem; font-weight: 700; text-align: center; margin-bottom: 2rem; color: var(--gray-900);">Áreas de Atuação</h2>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;" id="areasGrid">
-                    <!-- Areas will be loaded by JavaScript -->
-                </div>
-            </section>
+            </div>
         </div>
+        
+        <!-- Collaboration Section - Seção melhorada -->
+        <section class="collaboration-section">
+            <div class="collaboration-card">
+                <div class="collaboration-image-container">
+                    <img src="images/team-collaboration.png" alt="Equipe LEDS em colaboração" class="collaboration-image">
+                    <div class="collaboration-overlay"></div>
+                    <div class="collaboration-content">
+                        <div class="collaboration-text-box">
+                            <h2 class="collaboration-title">Colaboração e Inovação</h2>
+                            <p class="collaboration-description">
+                                Nosso ambiente promove a colaboração entre professores, alunos e parceiros para desenvolver soluções que transformam a realidade
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-section">
+            <div class="footer-grid-new">
+                <div class="footer-section-main">
+                    <img src="images/leds-logo-transparent.png" alt="LEDS Logo" class="footer-logo">
                     <h3 class="footer-title">LEDS</h3>
                     <p class="footer-text">
                         Laboratório de Extensão em Desenvolvimento de Soluções - IFES Campus Serra
@@ -162,36 +313,26 @@
                 </div>
 
                 <div class="footer-section">
-                    <h3 class="footer-title">Links</h3>
-                    <div class="footer-links">
-                        <a href="index.html" class="footer-link">Início</a>
-                        <a href="institucional.html" class="footer-link">Institucional</a>
-                        <a href="projetos.html" class="footer-link">Projetos</a>
-                        <a href="servicos.html" class="footer-link">Serviços</a>
-                        <a href="equipes.html" class="footer-link">Equipes</a>
-                        <a href="depoimentos.html" class="footer-link">Depoimentos</a>
-                        <a href="contato.html" class="footer-link">Contato</a>
-                    </div>
-                </div>
-
-                <div class="footer-section">
-                    <h3 class="footer-title">Institucional</h3>
-                    <div class="footer-links">
-                        <a href="https://serra.ifes.edu.br/" target="_blank" class="footer-link">
-                            IFES Campus Serra <i data-lucide="external-link"></i>
-                        </a>
-                        <a href="https://fapes.es.gov.br/" target="_blank" class="footer-link">
-                            FAPES <i data-lucide="external-link"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="footer-section">
                     <h3 class="footer-title">Contato</h3>
-                    <div class="footer-social">
-                        <a href="mailto:leds.ifes@gmail.com" class="social-link">
+                    <div class="footer-contact">
+                        <p class="footer-contact-item">
                             <i data-lucide="mail"></i>
-                        </a>
+                            leds.ifes@gmail.com
+                        </p>
+                        <p class="footer-contact-item">
+                            <i data-lucide="phone"></i>
+                            (27) 3149-0700
+                        </p>
+                        <p class="footer-contact-item">
+                            <i data-lucide="map-pin"></i>
+                            IFES Campus Serra
+                        </p>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="footer-title">Redes Sociais</h3>
+                    <div class="footer-social">
                         <a href="https://github.com/leds-org" target="_blank" class="social-link">
                             <i data-lucide="github"></i>
                         </a>

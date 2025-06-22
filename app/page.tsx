@@ -29,7 +29,7 @@ export default function HomePage() {
       </div>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen pt-20 flex flex-col items-center justify-center px-4">
+      <section className="relative min-h-screen pt-16 flex flex-col items-center justify-center px-4">
         <div className="max-w-6xl mx-auto text-center space-y-8">
           {/* Hero Content */}
           <div className="space-y-6 mb-8">
@@ -66,10 +66,10 @@ export default function HomePage() {
           </div>
 
           {/* Video Section - Updated with new video */}
-          <div className="mb-12">
-            <div className="relative w-full max-w-2xl mx-auto aspect-video">
+          <div className="mb-8">
+            <div className="relative w-full max-w-4xl mx-auto aspect-video">
               <VideoPlayer
-                videoId="1093373619"
+                videoId="1093765823"
                 className="w-full h-full shadow-xl border border-gray-200/50 bg-white/30 backdrop-blur-sm"
               />
             </div>

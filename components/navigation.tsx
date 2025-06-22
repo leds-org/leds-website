@@ -19,6 +19,7 @@ export default function Navigation() {
     { href: "/equipes", label: "Equipes" },
     { href: "/depoimentos", label: "Depoimentos" },
     { href: "/contato", label: "Contato" },
+    { href: "https://leds.academy/", label: "Academy", external: true },
   ]
 
   return (
@@ -42,6 +43,8 @@ export default function Navigation() {
               <Link
                 key={item.href}
                 href={item.href}
+                target={item.external ? "_blank" : undefined}
+                rel={item.external ? "noopener noreferrer" : undefined}
                 className={`text-sm font-medium transition-colors hover:text-blue-600 ${
                   pathname === item.href ? "text-blue-600" : "text-gray-700"
                 }`}
@@ -49,15 +52,6 @@ export default function Navigation() {
                 {item.label}
               </Link>
             ))}
-            {/* Academy link externo */}
-            <a
-              href="http://leds.academy/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm font-medium transition-colors hover:text-blue-600 text-gray-700"
-            >
-              Academy
-            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -81,6 +75,8 @@ export default function Navigation() {
                 <Link
                   key={item.href}
                   href={item.href}
+                  target={item.external ? "_blank" : undefined}
+                  rel={item.external ? "noopener noreferrer" : undefined}
                   className={`block px-3 py-2 text-sm font-medium rounded-md transition-colors ${
                     pathname === item.href
                       ? "text-blue-600 bg-blue-50/80"
@@ -91,15 +87,6 @@ export default function Navigation() {
                   {item.label}
                 </Link>
               ))}
-              {/* Academy link externo */}
-              <a
-                href="http://leds.academy/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block px-3 py-2 text-sm font-medium rounded-md text-gray-700 hover:text-gray-900 hover:bg-gray-50/80"
-              >
-                Academy
-              </a>
             </div>
           </div>
         )}
