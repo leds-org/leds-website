@@ -59,27 +59,29 @@
                 </p>
             </div>
 
-            <!-- Sobre o LEDS - Nova seção com layout lado a lado -->
-            <section class="institutional-about-section">
-                <div class="institutional-about-grid">
-                    <div class="institutional-about-content">
+            <!-- Accordion Sections -->
+            <div class="accordion-container">
+                
+                <!-- Sobre o LEDS -->
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <i data-lucide="info" class="accordion-icon"></i>
                         <h2>Sobre o LEDS</h2>
-                        <div class="content-text">
+                        <i data-lucide="chevron-down" class="accordion-chevron"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <div class="relative">
+                                <div class="card" style="overflow: hidden; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);">
+                                    <img src="images/leds-office-logo.png" alt="Logo e ambiente do LEDS" style="width: 100%; height: auto; object-fit: contain;">
+                                </div>
+                            </div>
                             <p>O Laboratório de Extensão e Desenvolvimento de Soluções (LEDS) é um programa de extensão ligado ao Instituto Federal do Espírito Santo Campus Serra que funciona atualmente na sala 804, localizado no bloco 8.</p>
                             <p>Criado em 2012, atualmente o programa conta com a participação de oito professores e 21 alunos, que atuam de forma interdisciplinar nos projetos. O Laboratório visa fazer a conexão, por meio de projetos, de demandas de entidades governamentais, empresas e organizações sociais com alunos e professores.</p>
                         </div>
                     </div>
-                    <div class="institutional-about-image">
-                        <div class="card">
-                            <img src="images/leds-office-logo.png" alt="Logo e ambiente do LEDS">
-                        </div>
-                    </div>
                 </div>
-            </section>
 
-            <!-- Accordion Sections -->
-            <div class="accordion-container">
-                
                 <!-- Conceito -->
                 <div class="accordion-item">
                     <button class="accordion-header" onclick="toggleAccordion(this)">
@@ -280,17 +282,15 @@
 
             </div>
         </div>
-        
-        <!-- Collaboration Section - Seção melhorada -->
-        <section class="collaboration-section">
-            <div class="collaboration-card">
-                <div class="collaboration-image-container">
-                    <img src="images/team-collaboration.png" alt="Equipe LEDS em colaboração" class="collaboration-image">
-                    <div class="collaboration-overlay"></div>
-                    <div class="collaboration-content">
-                        <div class="collaboration-text-box">
-                            <h2 class="collaboration-title">Colaboração e Inovação</h2>
-                            <p class="collaboration-description">
+        <section style="margin-bottom: 5rem;">
+            <div class="card" style="overflow: hidden; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);">
+                <div style="position: relative; height: 20rem;">
+                    <img src="images/team-collaboration.png" alt="Equipe LEDS em colaboração" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="overlay-strong" style="position: absolute; inset: 0;"></div>
+                    <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;">
+                        <div style="text-align: center; color: white; max-width: 48rem; padding: 2rem; background: rgba(0, 0, 0, 0.6); border-radius: 1rem; backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); margin: 2rem;">
+                            <h2 class="overlay-text-shadow" style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem;">Colaboração e Inovação</h2>
+                            <p class="overlay-text-shadow" style="font-size: 1.25rem; line-height: 1.6;">
                                 Nosso ambiente promove a colaboração entre professores, alunos e parceiros para desenvolver soluções que transformam a realidade
                             </p>
                         </div>
