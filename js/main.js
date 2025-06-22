@@ -7,14 +7,28 @@ const testimonials = [
   { content: "Excellent service!", name: "Jane Smith", role: "User" },
 ]
 
-// Initialize Lucide icons
+// Declare teamMembers array
+const teamMembers = [
+  {
+    name: "Alice Johnson",
+    role: "Developer",
+    photo: "images/alice.jpg",
+    linkedin: "https://linkedin.com/in/alicejohnson",
+  },
+  { name: "Bob Brown", role: "Designer", photo: "images/bob.jpg", linkedin: "https://linkedin.com/in/bobbrown" },
+  // Add more team members as needed
+]
+
+// Initialize when DOM is loaded
 document.addEventListener("DOMContentLoaded", () => {
+  // Initialize Lucide icons
   lucide.createIcons()
 
   // Initialize components
   initMobileMenu()
   initTestimonialSlider()
   initVideoModal()
+  loadTeamMembers()
 
   // Set active navigation link
   setActiveNavLink()
@@ -64,6 +78,33 @@ function setActiveNavLink() {
       link.classList.add("active")
     }
   })
+}
+
+// Load team members
+function loadTeamMembers() {
+  const teamGrid = document.getElementById("teamGrid")
+  if (!teamGrid) return
+
+  teamMembers.forEach((member) => {
+    const teamCard = document.createElement("div")
+    teamCard.className = "team-card"
+
+    teamCard.innerHTML = `
+      <div class="team-photo">
+        <img src="${member.photo}" alt="${member.name}">
+      </div>
+      <h3 class="team-name">${member.name}</h3>
+      <p class="team-role">${member.role}</p>
+      <a href="${member.linkedin}" target="_blank" class="team-linkedin">
+        LinkedIn <i data-lucide="external-link"></i>
+      </a>
+    `
+
+    teamGrid.appendChild(teamCard)
+  })
+
+  // Recreate icons after adding content
+  lucide.createIcons()
 }
 
 // Testimonial slider functionality
@@ -170,7 +211,7 @@ function openVideoModal() {
   const modalVideo = document.getElementById("modalVideo")
 
   if (modal && modalVideo) {
-    modalVideo.src = "https://player.vimeo.com/video/1093373619?autoplay=1&loop=1"
+    modalVideo.src = "https://player.vimeo.com/video/1093765823?autoplay=1&loop=1"
     modal.classList.add("active")
     document.body.style.overflow = "hidden"
   }
@@ -221,20 +262,6 @@ function getStatusTextColor(status) {
   }
 }
 
-// Smooth scrolling for anchor links
-document.addEventListener("click", (e) => {
-  if (e.target.matches('a[href^="#"]')) {
-    e.preventDefault()
-    const target = document.querySelector(e.target.getAttribute("href"))
-    if (target) {
-      target.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      })
-    }
-  }
-})
-
 // Form submission handler (for contact forms)
 function handleFormSubmit(e) {
   e.preventDefault()
@@ -253,17 +280,19 @@ function handleFormSubmit(e) {
   e.target.reset()
 }
 
-// Add loading states to buttons
-function addLoadingState(button, text = "Carregando...") {
-  const originalText = button.innerHTML
-  button.innerHTML = text
-  button.disabled = true
-
-  return function removeLoadingState() {
-    button.innerHTML = originalText
-    button.disabled = false
+// Smooth scrolling for anchor links
+document.addEventListener("click", (e) => {
+  if (e.target.matches('a[href^="#"]')) {
+    e.preventDefault()
+    const target = document.querySelector(e.target.getAttribute("href"))
+    if (target) {
+      target.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      })
+    }
   }
-}
+})
 
 // Intersection Observer for animations
 function initScrollAnimations() {

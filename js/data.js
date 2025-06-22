@@ -4,49 +4,35 @@ const testimonials = [
     name: "Tarcísio",
     role: "Desenvolvedor – Banco BTG Pactual",
     content:
-      "Se me perguntassem se há algo de que me arrependo no LEDS, certamente seria o fato de não ter participado do laboratório mais cedo, durante a faculdade.",
+      "Se me perguntassem se há algo de que me arrependo no LEDS, certamente seria o fato de não ter participado do laboratório mais cedo, durante a faculdade. Lá dentro, tive noções mais profundas de como a computação é uma atividade meio — uma ferramenta para resolver problemas reais da vida.",
     location: "LEDS Serra",
   },
   {
     name: "Renan Osório Rios",
     role: "Professor – Ifes Campus Colatina",
     content:
-      "Participar do LEDS como orientador virou a chave na minha carreira como professor. O LEDS me mostrou que o professor precisa viver o mercado para ensinar algo conectado com a realidade.",
+      "Participar do LEDS como orientador virou a chave na minha carreira como professor. Estar ao lado dos estudantes, orientando no desenvolvimento de software com foco no mercado real, me tirou da bolha acadêmica e me fez repensar como ensinar.",
     location: "LEDS Colatina",
+  },
+  {
+    name: "Vinícius",
+    role: "Ex-integrante LEDS Serra",
+    content:
+      "O LEDS me proporcionou alguns atalhos na minha carreira. Isso não significa que tornou o caminho mais fácil, mas sim que me permitiu ter maiores responsabilidades na área de desenvolvimento de software logo no início. Em um ambiente com projetos reais, tive a oportunidade de aprimorar minhas habilidades como desenvolvedor.",
+    location: "LEDS Serra",
   },
   {
     name: "Ex-LEDS",
     role: "Desenvolvedor – Empresa nos EUA",
     content:
-      "O LEDS definitivamente é uma faculdade dentro do IFES. Hoje trabalho para uma empresa dos Estados Unidos — e agora só falta conquistar o mundo 😁.",
-    location: "LEDS Serra",
-  },
-  {
-    name: "Ex-LEDS",
-    role: "Desenvolvedor Full Stack",
-    content:
-      "O LEDS me deu atalhos na carreira, permitindo assumir grandes responsabilidades logo no início. Em qualquer empresa, levaria anos para ter essa vivência.",
-    location: "LEDS Serra",
-  },
-  {
-    name: "Ex-LEDS",
-    role: "Gerente de Produto – Empresa de capital aberto em SP",
-    content:
-      "Pessoas inovadoras constroem produtos inovadores. O LEDS me deu ambiente e pessoas certas para isso. Minha base? O LEDS.",
+      "O LEDS definitivamente é uma faculdade dentro do IFES. Comecei no terceiro semestre e encontrei um ambiente de colaboração e apoio. Hoje trabalho para uma empresa dos Estados Unidos — e agora só falta conquistar o mundo 😁.",
     location: "LEDS Serra",
   },
   {
     name: "Diego Pasti",
     role: "Ex-integrante LEDS – Consultor e Desenvolvedor",
     content:
-      "Participei do LEDS de 2014 a 2016. Foi uma experiência transformadora. Mais que um programador, me tornei um resolvedor de problemas.",
-    location: "LEDS Serra",
-  },
-  {
-    name: "Vinícius",
-    role: "Ex-integrante LEDS Serra",
-    content:
-      "O LEDS me proporcionou alguns atalhos na minha carreira. Isso não significa que tornou o caminho mais fácil, mas sim que me permitiu ter maiores responsabilidades na área de desenvolvimento de software logo no início. Em um ambiente com projetos reais, tive a oportunidade de aprimorar minhas habilidades como desenvolvedor, entendendo que a tecnologia é apenas uma ferramenta para resolver dores reais da nossa sociedade.\n\nPude vivenciar problemas reais, levantar requisitos, conversar com os clientes, participar ativamente do desenvolvimento da solução, liderar uma equipe de desenvolvedores, atuar em um time multidisciplinar e apresentar o produto ao cliente. Em qualquer outra empresa, levaria anos para ter acesso a tantas frentes de atuação diferentes.\n\nO LEDS também me ensinou o valor de se arriscar em um ambiente onde os erros não são punidos, mas transformados em aprendizados que no futuro servem como guia para os novos integrantes.",
+      "Participei do LEDS de 2014 a 2016. Foi uma experiência transformadora. Mais que um programador, me tornei um resolvedor de problemas. Um profissional que atua quando os outros desistem. Fui LEDS em todos os lugares onde trabalhei desde então.",
     location: "LEDS Serra",
   },
 ]
@@ -236,68 +222,6 @@ const teams = [
     color: "from-blue-500 to-blue-600",
     technologies: ["React", "Next.js", "Node.js", "Python", "PostgreSQL", "Docker", "TypeScript", "JavaScript"],
     roles: ["Frontend Developer", "Backend Developer", "Full Stack Developer", "Mobile Developer"],
-  },
-]
-
-// Institutional data
-const areas = [
-  {
-    name: "Engenharia de Software",
-    icon: "cpu",
-    description: "Desenvolvimento de metodologias e ferramentas para criação de software de qualidade",
-    color: "from-blue-500 to-blue-600",
-  },
-  {
-    name: "Ciência de Dados",
-    icon: "book-open",
-    description: "Análise e processamento de grandes volumes de dados para geração de insights",
-    color: "from-green-500 to-green-600",
-  },
-  {
-    name: "Inteligência Computacional",
-    icon: "lightbulb",
-    description: "Desenvolvimento de sistemas inteligentes e algoritmos de aprendizado de máquina",
-    color: "from-red-500 to-red-600",
-  },
-]
-
-const pillars = [
-  {
-    title: "Ensino",
-    description: "Formação de profissionais qualificados através de metodologias inovadoras",
-    icon: "book-open",
-  },
-  {
-    title: "Pesquisa",
-    description: "Desenvolvimento de conhecimento científico e tecnológico de ponta",
-    icon: "target",
-  },
-  {
-    title: "Extensão",
-    description: "Aplicação do conhecimento para solucionar problemas reais da sociedade",
-    icon: "users",
-  },
-]
-
-const campuses = [
-  {
-    name: "LEDS Serra",
-    description: "Campus principal do LEDS, onde iniciou suas atividades em 2012",
-    address: "IFES Campus Serra - Rodovia ES-010, Km 6,5 - Manguinhos, Serra - ES",
-    color: "from-blue-500 to-blue-600",
-  },
-  {
-    name: "LEDS Colatina",
-    description: "Unidade focada em desenvolvimento de software e inteligência artificial",
-    address: "IFES Campus Colatina - Av. Arino Gomes Leal, 1700 - Santa Margarida, Colatina - ES",
-    color: "from-green-500 to-green-600",
-  },
-  {
-    name: "LEDS Cachoeiro de Itapemirim",
-    description: "Unidade especializada em automação e sistemas embarcados",
-    address:
-      "IFES Campus Cachoeiro - Rod. ES-482 (Cachoeiro-Alegre) - Fazenda Morro Grande, Cachoeiro de Itapemirim - ES",
-    color: "from-red-500 to-red-600",
   },
 ]
 
