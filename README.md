@@ -1,38 +1,31 @@
-# LEDS Website
+# LEDS Website - Versão Estática
 
 Website oficial do LEDS - Laboratório de Extensão em Desenvolvimento de Soluções do IFES Campus Serra.
 
-## 🚀 GitHub Pages
+## 🚀 Como usar
 
-Este site está configurado para funcionar perfeitamente no GitHub Pages. Para fazer o deploy:
+Este site é completamente estático e funciona apenas abrindo o arquivo `index.html` no navegador. **Não precisa de build, servidor ou instalação de dependências.**
 
-1. Faça o upload de todos os arquivos para o seu repositório GitHub
-2. Vá em Settings > Pages
-3. Selecione "Deploy from a branch"
-4. Escolha a branch "main" e a pasta "/ (root)"
-5. Clique em "Save"
+### Instruções:
 
-O site estará disponível em: `https://[seu-usuario].github.io/[nome-do-repositorio]`
+1. Baixe todos os arquivos
+2. Abra o arquivo `index.html` no seu navegador
+3. Pronto! O site está funcionando
 
 ## 📁 Estrutura do Projeto
 
 \`\`\`
 /
 ├── index.html              # Página inicial
-├── institucional.html      # Página institucional
+├── institucional.html      # Página institucional  
 ├── projetos.html          # Página de projetos
 ├── servicos.html          # Página de serviços
 ├── equipes.html           # Página de equipes
 ├── depoimentos.html       # Página de depoimentos
 ├── contato.html           # Página de contato
-├── css/
-│   └── styles.css         # Estilos principais
-├── js/
-│   ├── data.js           # Dados do site
-│   ├── main.js           # Funcionalidades principais
-│   └── institucional.js  # Scripts específicos
-├── images/               # Imagens do site
-└── README.md            # Este arquivo
+├── styles.css             # Estilos principais
+├── script.js              # JavaScript principal
+└── README.md              # Este arquivo
 \`\`\`
 
 ## 🛠️ Tecnologias Utilizadas
@@ -40,7 +33,7 @@ O site estará disponível em: `https://[seu-usuario].github.io/[nome-do-reposit
 - **HTML5**: Estrutura semântica
 - **CSS3**: Estilos modernos com variáveis CSS e Flexbox/Grid
 - **JavaScript ES6+**: Funcionalidades interativas
-- **Lucide Icons**: Ícones SVG
+- **SVG Icons**: Ícones vetoriais inline
 - **Google Fonts**: Tipografia (Inter)
 
 ## ✨ Funcionalidades
@@ -50,7 +43,7 @@ O site estará disponível em: `https://[seu-usuario].github.io/[nome-do-reposit
 - ✅ Slider de depoimentos com navegação manual
 - ✅ Modal de vídeo em tela cheia
 - ✅ Animações suaves e efeitos visuais
-- ✅ Dados organizados em arquivos separados
+- ✅ Funciona sem servidor, apenas abrindo os arquivos
 - ✅ SEO otimizado
 
 ## 📱 Responsividade
@@ -64,7 +57,7 @@ O site é totalmente responsivo e funciona perfeitamente em:
 ## 🎨 Personalização
 
 ### Cores
-As cores principais estão definidas em `:root` no arquivo `css/styles.css`:
+As cores principais estão definidas em `:root` no arquivo `styles.css`:
 \`\`\`css
 :root {
     --leds-blue: #2563eb;
@@ -75,7 +68,7 @@ As cores principais estão definidas em `:root` no arquivo `css/styles.css`:
 \`\`\`
 
 ### Dados
-Todos os dados do site estão centralizados no arquivo `js/data.js`:
+Todos os dados do site estão centralizados no arquivo `script.js`:
 - Depoimentos
 - Membros da equipe
 - Projetos
@@ -84,16 +77,19 @@ Todos os dados do site estão centralizados no arquivo `js/data.js`:
 - Informações institucionais
 
 ### Imagens
-Coloque todas as imagens na pasta `images/` e referencie-as nos dados ou diretamente no HTML.
+As imagens estão hospedadas externamente e referenciadas diretamente no HTML. Para usar suas próprias imagens:
+1. Substitua as URLs das imagens pelos caminhos locais
+2. Coloque as imagens em uma pasta `images/`
+3. Atualize os caminhos no HTML
 
 ## 🔧 Manutenção
 
 Para atualizar o conteúdo do site:
 
-1. **Adicionar novo depoimento**: Edite o array `testimonials` em `js/data.js`
-2. **Atualizar projetos**: Modifique o array `projects` em `js/data.js`
-3. **Alterar informações da equipe**: Edite `teamMembers` em `js/data.js`
-4. **Modificar serviços**: Atualize o array `services` em `js/data.js`
+1. **Adicionar novo depoimento**: Edite o array `testimonials` em `script.js`
+2. **Atualizar projetos**: Modifique os dados diretamente no HTML ou crie um array em `script.js`
+3. **Alterar informações da equipe**: Edite os dados da equipe no HTML
+4. **Modificar serviços**: Atualize o conteúdo diretamente no HTML
 
 ## 📞 Suporte
 
@@ -104,21 +100,3 @@ Para dúvidas ou suporte técnico, entre em contato:
 ## 📄 Licença
 
 © 2024 LEDS - Laboratório de Extensão em Desenvolvimento de Soluções. Todos os direitos reservados.
-\`\`\`
-
-O projeto agora está completamente convertido para HTML, CSS e JavaScript puro, mantendo exatamente o mesmo design e funcionalidades do projeto React original. Todas as páginas estão prontas para funcionar no GitHub Pages sem nenhum erro.
-
-**Principais características da conversão:**
-
-1. ✅ **HTML semântico** com estrutura limpa
-2. ✅ **CSS moderno** com variáveis, Flexbox e Grid
-3. ✅ **JavaScript vanilla** para todas as funcionalidades
-4. ✅ **Dados separados** em arquivos externos para fácil manutenção
-5. ✅ **Responsividade completa** para todos os dispositivos
-6. ✅ **Navegação funcional** com menu mobile
-7. ✅ **Slider de depoimentos** com controles manuais
-8. ✅ **Modal de vídeo** em tela cheia
-9. ✅ **Ícones Lucide** carregados via CDN
-10. ✅ **Fontes Google** (Inter) para tipografia
-
-Basta fazer o upload desses arquivos para o GitHub e ativar o GitHub Pages que o site funcionará perfeitamente!
